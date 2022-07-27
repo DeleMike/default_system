@@ -79,7 +79,7 @@ def predict():
       'prediction_text': prediction_text,
    })
 
-   return render_template('index.html', prediction_text=prediction_text)
+   return render_template('index.html', prediction_text=prediction_text + ' with a probability of ' + str(round(y_pred,3)))
 
 
 if __name__ == "__main__":
