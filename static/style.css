@@ -1,4 +1,4 @@
-body{
+body {
    padding: 0;
    margin: 0;
    background-color: #1C3563;
@@ -50,4 +50,9 @@ button {
 
 button:hover {
    background-color: #264783;
+}
+
+.prediction_text {
+   color: white;
+   
 }
