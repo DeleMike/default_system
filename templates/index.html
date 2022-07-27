@@ -8,11 +8,14 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
    <title>Credit Default Predictions</title>
 </head>
 
 <body>
+   <center>
+      <h2 class="prediction_text">{{ prediction_text }}</h2>
+   </center>
    <form action="/predict" method="post">
       <center>
          <h2>Please Enter your details</h2>
@@ -28,6 +31,9 @@
             <option value="single">Single</option>
             <option value="others">Others</option>
          </select>
+
+         <label for="age">Age</label>
+         <input type="text" name="age" id="age">
       </div>
 
       <div class="block sex">
@@ -117,6 +123,19 @@
 
          <label for="pay_5">Fifth month payment time:</label>
          <select name="pay_5" id="pay_5">
+            <option value="one_month_early">One month early</option>
+            <option value="duly">Duly</option>
+            <option value="one_month_late">One month late</option>
+            <option value="two_month_late">Two month late</option>
+            <option value="three_month_late">Three month late</option>
+            <option value="four_month_late">Four month late</option>
+            <option value="five_month_late">Five month late</option>
+            <option value="six_month_late">Six month late</option>
+            <option value="seven_month_late">Seven month late</option>
+         </select>
+
+         <label for="pay_6">Sixth month payment time:</label>
+         <select name="pay_6" id="pay_6">
             <option value="one_month_early">One month early</option>
             <option value="duly">Duly</option>
             <option value="one_month_late">One month late</option>

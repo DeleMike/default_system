@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 import requests
+from flask import Flask, render_template, request, jsonify, Response
 
 url = 'http://localhost:9696/predict'
+
+customer_features = [x for x in request.form.values()]
 
 customer = {
 "sex": "female",
@@ -33,9 +36,9 @@ customer = {
 response = requests.post(url, json=customer).json()
 print(response)
 
-if response['default']:
-   print('Customer will default')
-else:
-   print('Customer will not default')
+# if response['default']:
+#    print('Customer will default')
+# else:
+#    print('Customer will not default')
 
 
