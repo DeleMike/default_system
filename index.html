@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <title>Credit Default Predictions</title>
+</head>
+
+<body>
+   <form action="/predict" method="post">
+      <center>
+         <h2>Please Enter your details</h2>
+      </center>
+      <div class="block bio">
+         <h3>Personal Details</h3>
+         <label for="name">Customer name: </label>
+         <input type="text" name="name" id="name">
+
+         <label for="relationship">Relationship Status:</label>
+         <select name="relationship" id="relationship">
+            <option value="married">Married</option>
+            <option value="single">Single</option>
+            <option value="others">Others</option>
+         </select>
+      </div>
+
+      <div class="block sex">
+         <p>Sex</p>
+         <input type="radio" id="female" name="sex" value="female">
+         <label for="female">Female</label>
+         <input type="radio" id="male" name="sex" value="male">
+         <label for="male">Male</label>
+         <input type="radio" id="custom" name="sex" value="custom">
+         <label for="custom">Custom</label>
+      </div><br>
+
+
+      <div class="block education">
+         <label for="education">Education Level</label>
+         <select name="education" id="education">
+            <option value="graduate_school">Graduate School</option>
+            <option value="university">University</option>
+            <option value="secondary">Secondary</option>
+            <option value="primary">Primary</option>
+            <option value="vocational">Vocational</option>
+            <option value="others">Others</option>
+         </select>
+      </div>
+
+      <div class="block credit-limit">
+         <h3>Credit balance limit</h3>
+         <label for="limit_bal">Amount of Given Credit(Limit Balance): </label>
+         <input type="text" name="limit_bal" id="limit_bal">
+      </div>
+
+
+      <div class="block history">
+         <h3>History of past payment.</h3>
+         <label for="pay_1">First month payment time:</label>
+         <select name="pay_1" id="pay_1">
+            <option value="one_month_early">One month early</option>
+            <option value="duly">Duly</option>
+            <option value="one_month_late">One month late</option>
+            <option value="two_month_late">Two month late</option>
+            <option value="three_month_late">Three month late</option>
+            <option value="four_month_late">Four month late</option>
+            <option value="five_month_late">Five month late</option>
+            <option value="six_month_late">Six month late</option>
+            <option value="seven_month_late">Seven month late</option>
+         </select>
+
+         <label for="pay_2">Second month payment time:</label>
+         <select name="pay_2" id="pay_2">
+            <option value="one_month_early">One month early</option>
+            <option value="duly">Duly</option>
+            <option value="one_month_late">One month late</option>
+            <option value="two_month_late">Two month late</option>
+            <option value="three_month_late">Three month late</option>
+            <option value="four_month_late">Four month late</option>
+            <option value="five_month_late">Five month late</option>
+            <option value="six_month_late">Six month late</option>
+            <option value="seven_month_late">Seven month late</option>
+         </select>
+
+         <label for="pay_3">Third month payment time:</label>
+         <select name="pay_3" id="pay_3">
+            <option value="one_month_early">One month early</option>
+            <option value="duly">Duly</option>
+            <option value="one_month_late">One month late</option>
+            <option value="two_month_late">Two month late</option>
+            <option value="three_month_late">Three month late</option>
+            <option value="four_month_late">Four month late</option>
+            <option value="five_month_late">Five month late</option>
+            <option value="six_month_late">Six month late</option>
+            <option value="seven_month_late">Seven month late</option>
+         </select>
+
+         <label for="pay_4">Fourth month payment time:</label>
+         <select name="pay_4" id="pay_4">
+            <option value="one_month_early">One month early</option>
+            <option value="duly">Duly</option>
+            <option value="one_month_late">One month late</option>
+            <option value="two_month_late">Two month late</option>
+            <option value="three_month_late">Three month late</option>
+            <option value="four_month_late">Four month late</option>
+            <option value="five_month_late">Five month late</option>
+            <option value="six_month_late">Six month late</option>
+            <option value="seven_month_late">Seven month late</option>
+         </select>
+
+
+         <label for="pay_5">Fifth month payment time:</label>
+         <select name="pay_5" id="pay_5">
+            <option value="one_month_early">One month early</option>
+            <option value="duly">Duly</option>
+            <option value="one_month_late">One month late</option>
+            <option value="two_month_late">Two month late</option>
+            <option value="three_month_late">Three month late</option>
+            <option value="four_month_late">Four month late</option>
+            <option value="five_month_late">Five month late</option>
+            <option value="six_month_late">Six month late</option>
+            <option value="seven_month_late">Seven month late</option>
+         </select>
+
+      </div>
+
+      <div class="block bill_amt">
+         <h3>Amount of bill statement</h3>
+         <label for="bill_amt_1">Bill for first month</label>
+         <input type="text" name="bill_amt_1" id="bill_amt_1">
+         <label for="bill_amt_2">Bill for second month</label>
+         <input type="text" name="bill_amt_2" id="bill_amt_2">
+         <label for="bill_amt_3">Bill for third month</label>
+         <input type="text" name="bill_amt_3" id="bill_amt_3">
+         <label for="bill_amt_4">Bill for fourth month</label>
+         <input type="text" name="bill_amt_4" id="bill_amt_4">
+         <label for="bill_amt_5">Bill for fifth month</label>
+         <input type="text" name="bill_amt_5" id="bill_amt_5">
+         <label for="bill_amt_6">Bill for sixth month</label>
+         <input type="text" name="bill_amt_6" id="bill_amt_6">
+      </div>
+
+      <div class="block pay_amt">
+         <h3>Amount of previous payment</h3>
+         <label for="pay_amt_1">Payment paid for first month</label>
+         <input type="text" name="pay_amt_1" id="pay_amt_1">
+         <label for="pay_amt_2">Payment paid for second month</label>
+         <input type="text" name="pay_amt_2" id="pay_amt_2">
+         <label for="pay_amt_3">Payment paid for third month</label>
+         <input type="text" name="pay_amt_3" id="pay_amt_3">
+         <label for="pay_amt_4">Payment paid for fourth month</label>
+         <input type="text" name="pay_amt_4" id="pay_amt_4">
+         <label for="pay_amt_5">Payment paid for fifth month</label>
+         <input type="text" name="pay_amt_5" id="pay_amt_5">
+         <label for="pay_amt_6">Payment paid for sixth month</label>
+         <input type="text" name="pay_amt_6" id="pay_amt_6">
+      </div>
+
+      <center>
+         <button type="submit">Check if customer will default for next month's payment</button>
+      </center>
+
+   </form>
+
+</body>
+
+</html>
